@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER  siddhesh
 RUN apt-get update
 RUN apt install apache2 -y
