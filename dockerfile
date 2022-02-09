@@ -1,4 +1,4 @@
-FROM ubnutu:latest
+FROM ubuntu:latest
 MAINTAINER  siddhesh
 RUN apt-get update
 RUN apt install apache2
