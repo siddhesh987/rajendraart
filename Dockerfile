@@ -11,4 +11,4 @@
 #COPY index.html /var/www/html/ 
 
 FROM httpd:2.4
-COPY . /usr/local/apache2/htdocs/
+COPY /home/roo/raju-web/ /usr/local/apache2/htdocs/
