@@ -1,4 +1,4 @@
-#FROM centos-7-systemd
+#ROM centos-7-systemd
 #MAINTAINER  siddhesh
 #RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-Linux-*
 #RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-*
@@ -11,4 +11,5 @@
 #COPY index.html /var/www/html/ 
 
 FROM httpd:2.4
+MAINTAINER 'SIDDHESH'
 COPY /home/roo/raju-web/ /usr/local/apache2/htdocs/
