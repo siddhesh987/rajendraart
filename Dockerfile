@@ -10,6 +10,12 @@
 #EXPOSE 80
 #COPY index.html /var/www/html/ 
 
-FROM httpd:2.4
+FROM ubuntu:18.04
 MAINTAINER 'SIDDHESH'
-COPY . /usr/local/apache2/htdocs/
+RUN apt update
+RUN apt install apache2 -y
+CMD systemctl start apache2
+CMD systemctl enable apache2
+COPY ./myserver.* /etc/ssl/certs/
+COPY ./ssl.conf  /etc/apache2/sites-available/
+COPY . /var/www/html/
